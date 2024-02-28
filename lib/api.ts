@@ -1,4 +1,4 @@
-const API_URL = process.env.WORDPRESS_API_URL
+import {WORDPRESS_API_URL} from '../constants/url'
 
 async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
   const headers = { 'Content-Type': 'application/json' }
@@ -11,7 +11,7 @@ async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
 
   // WPGraphQL Plugin must be enabled
   try {
-    const res = await fetch(API_URL!, {
+    const res = await fetch(WORDPRESS_API_URL!, {
       headers,
       method: 'POST',
       body: JSON.stringify({
