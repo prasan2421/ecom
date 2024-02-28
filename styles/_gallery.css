@@ -1,0 +1,55 @@
+.gallery {
+  color: white;
+  padding: 20px;
+}
+
+.text-section {
+  text-align: center;
+}
+.gallery h2 {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.image-on-display img {
+  width: 100%;
+}
+
+.gallery-slider {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.gallery-slider img {
+  width: 190px;
+  /* filter: grayscale(10); */
+  cursor: pointer;
+}
+
+.gallery-slider-active img {
+  width: 190px;
+  
+  cursor: pointer;
+}
+.gallery-image {
+  filter: grayscale(10);
+}
+.gallery-image-active {
+  filter: grayscale(0);
+}
+.gallery-image:hover {
+  filter: grayscale(0);
+}
+
+.gallery-slider::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 798px) {
+  .gallery-slider img {
+    width: 90px;
+  }
+}
