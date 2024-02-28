@@ -1,8 +1,6 @@
 
-const WORDPRESS_API_URL= 'https://admin.tedxtrondheim.com/graphql'
 
-// if (!process.env.WORDPRESS_API_URL) {
-  if (!WORDPRESS_API_URL) {
+if (!process.env.WORDPRESS_API_URL) {
   throw new Error(`
     Please provide a valid WordPress instance URL.
     Add to your environment variables WORDPRESS_API_URL.
@@ -32,7 +30,7 @@ module.exports = {
     unoptimized: true,
     
     domains: [
-    WORDPRESS_API_URL.match(/(?!(w+)\.)\w*(?:\w+\.)+\w+/)[0], // Valid WP Image domain.
+     process.env.WORDPRESS_API_URL.match(/(?!(w+)\.)\w*(?:\w+\.)+\w+/)[0], // Valid WP Image domain.
       //  'http://localhost:8888/',
       '0.gravatar.com',
       '1.gravatar.com',
