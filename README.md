@@ -1,6 +1,8 @@
-# Steps to work 
+# Next E-commerce.
 
-## Google api key
+## Steps to work 
+
+### Google api key
 
 1. Open google console @ 'https://console.cloud.google.com/'
 2. Create a new project.
@@ -12,7 +14,3 @@
 8. Add " NEXT_PUBLIC_YOUTUBE_API_KEY= {your Api key} "
 9. Add " NEXT_PUBLIC_SPREADSHEET_API_KEY = {Spreadsheet ID } "
 
-
-## Wordpress API 
-
-1. Add WORDPRESS_API_URL = 'https://nextxwordpress.000webhostapp.com/graphql' in .env file
